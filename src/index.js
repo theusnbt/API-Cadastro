@@ -1,7 +1,9 @@
 import app from './app.js';
 import dotenv from 'dotenv';
+import startDB from './db/db.js'
 
 dotenv.config();
+startDB();
 
 const PORT = 5675;
 
