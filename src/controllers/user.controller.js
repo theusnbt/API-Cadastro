@@ -8,7 +8,8 @@ class UserController{
             res.status(201).json({message: "Usuário criado"});
         }
         catch(error){
-            res.status(500).json({message:"Internal Error"});
+            console.log(error);
+            res.status(400).json({ message:error.message });
         }
     }
 }
