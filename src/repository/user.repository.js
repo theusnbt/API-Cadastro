@@ -8,6 +8,12 @@ class UserRepository{
     async create(data){
         return userModel.create(data);
     }
+    async findById(id){
+        return userModel.findById(id);
+    }
+    async findAll(){
+        return userModel.find();   
+    }
 }
 
 export default new UserRepository();

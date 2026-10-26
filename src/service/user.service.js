@@ -12,6 +12,17 @@ class UserService{
         const user = await repository.create({ ...data, password:hash });
         return user;
     }
+    async findById(id){
+        const user = await repository.findById(id);
+        if(!user){
+            throw new Error('Usuário não encontrado.');
+        }
+
+        return user;
+    }
+    async findAll(){
+        return repository.findAll();
+    }
 }
 
 export default new UserService;
